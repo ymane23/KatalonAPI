@@ -18,11 +18,4 @@
       <testCaseId>Test Cases/script</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
-   <testCaseLink>
-      <guid>9d20a4fd-6b19-4e76-8b75-aaae52cb1110</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/BillPaymentProcess</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
 </TestSuiteEntity>
