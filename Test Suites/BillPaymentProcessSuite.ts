@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Example</name>
+   <name>BillPaymentProcessSuite</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,9 +10,9 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>true</rerunImmediately>
-   <testSuiteGuid>59355984-8f8a-4994-b6d4-ff9d3a3da2bf</testSuiteGuid>
+   <testSuiteGuid>3eddb0c6-93c2-4dee-8e21-24f53e0b2883</testSuiteGuid>
    <testCaseLink>
-      <guid>15dd01fc-b031-422a-84ee-5e3df7968d0e</guid>
+      <guid>56e9f1dd-c1d7-4120-aaba-d59b6b952f28</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/BillPaymentProcess</testCaseId>

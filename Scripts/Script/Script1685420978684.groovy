@@ -17,17 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.callTestCase(findTestCase('BillPaymentProcess'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WS.sendRequestAndVerify(findTestObject('RestWebservices/Activate client account'))
-sourceId = WS.sendRequestAndVerify(findTestObject('RestWebservices/Create source account'))
-def slurper = new groovy.json.JsonSlurper()
-def result = slurper.parseText(sourceId.getResponseBodyContent())
-def sourceIdValue = result.id
-println('..value extracted is :' + sourceIdValue)
-vendorId = WS.sendRequestAndVerify(findTestObject('RestWebservices/Create Vendor'))
-slurper = new groovy.json.JsonSlurper()
-result = slurper.parseText(vendorId.getResponseBodyContent())
-def VendorIdValue = result.id
-println('..value extracted is :' + VendorIdValue)
-WS.sendRequestAndVerify(findTestObject('RestWebservices/Create Vendor Account', [('vendorId') : VendorIdValue]))
-WS.sendRequestAndVerify(findTestObject('RestWebservices/Create Payment Virtual', [('vendorId') : VendorIdValue, ('sourceId') : sourceIdValue]))
+import groovy.json.JsonSlurper
+def json = new JsonSlurper().parseText( new URL( 'https://s3.amazonaws.com/billpay-docs/billpay.json' ).text )

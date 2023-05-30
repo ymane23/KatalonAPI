@@ -1,0 +1,17 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+BillPaymentProcessSuite,,,,2023-05-30 07:54:23,2023-05-30 07:54:33,10.361s,PASSED
+,,,,,,,
+Test Cases/BillPaymentProcess,,,,2023-05-30 07:54:23,2023-05-30 07:54:33,10.198s,PASSED
+"sendRequestAndVerify(findTestObject(""RestWebservices/Activate client account""))",,,,2023-05-30 07:54:23,2023-05-30 07:54:26,3.320s,PASSED
+"sourceId = sendRequestAndVerify(findTestObject(""RestWebservices/Create source account""))",,,,2023-05-30 07:54:26,2023-05-30 07:54:28,1.901s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2023-05-30 07:54:28,2023-05-30 07:54:28,0.000s,PASSED
+result = slurper.parseText(sourceId.getResponseBodyContent()),,,,2023-05-30 07:54:28,2023-05-30 07:54:28,0.001s,PASSED
+sourceIdValue = id,,,,2023-05-30 07:54:28,2023-05-30 07:54:28,0.001s,PASSED
+"println(""..value extracted is :"" + sourceIdValue)",,,,2023-05-30 07:54:28,2023-05-30 07:54:28,0.002s,PASSED
+"vendorId = sendRequestAndVerify(findTestObject(""RestWebservices/Create Vendor""))",,,,2023-05-30 07:54:28,2023-05-30 07:54:30,1.907s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2023-05-30 07:54:30,2023-05-30 07:54:30,0.001s,PASSED
+result = slurper.parseText(vendorId.getResponseBodyContent()),,,,2023-05-30 07:54:30,2023-05-30 07:54:30,0.000s,PASSED
+VendorIdValue = id,,,,2023-05-30 07:54:30,2023-05-30 07:54:30,0.000s,PASSED
+"println(""..value extracted is :"" + VendorIdValue)",,,,2023-05-30 07:54:30,2023-05-30 07:54:30,0.001s,PASSED
+"sendRequestAndVerify(findTestObject(""RestWebservices/Create Vendor Account"", [""vendorId"":VendorIdValue]))",,,,2023-05-30 07:54:30,2023-05-30 07:54:32,1.771s,PASSED
+"sendRequestAndVerify(findTestObject(""RestWebservices/Create Payment Virtual"", [""vendorId"":VendorIdValue, ""sourceId"":sourceIdValue]))",,,,2023-05-30 07:54:32,2023-05-30 07:54:33,1.162s,PASSED

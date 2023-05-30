@@ -6,6 +6,7 @@
    <UUID>4bda6a0d-6eb5-43d8-9def-db92a91303ae</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
+   <projectFileLocation>C:\Users\ymane\git\KatalonAPI\KatalonAPI.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
