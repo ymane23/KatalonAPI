@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Scripts,,,,2023-05-30 20:21:44,2023-05-30 20:21:56,12.171s,PASSED
+,,,,,,,
+Test Cases/script,,,,2023-05-30 20:21:44,2023-05-30 20:21:56,11.953s,PASSED
+"callTestCase(findTestCase(""BillPaymentProcess""), [:], STOP_ON_FAILURE)",,,,2023-05-30 20:21:44,2023-05-30 20:21:56,11.754s,PASSED
