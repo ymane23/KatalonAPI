@@ -1,0 +1,20 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Scripts,,,,2023-05-30 20:34:36,2023-05-30 20:34:59,22.238s,PASSED
+,,,,,,,
+Test Cases/script,,,,2023-05-30 20:34:37,2023-05-30 20:34:49,12.168s,PASSED
+"callTestCase(findTestCase(""BillPaymentProcess""), [:], STOP_ON_FAILURE)",,,,2023-05-30 20:34:37,2023-05-30 20:34:49,11.981s,PASSED
+,,,,,,,
+Test Cases/BillPaymentProcess,,,,2023-05-30 20:34:49,2023-05-30 20:34:59,9.871s,PASSED
+"sendRequestAndVerify(findTestObject(""RestWebservices/Activate client account""))",,,,2023-05-30 20:34:49,2023-05-30 20:34:51,2.227s,PASSED
+"sourceId = sendRequestAndVerify(findTestObject(""RestWebservices/Create source account""))",,,,2023-05-30 20:34:51,2023-05-30 20:34:53,1.959s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2023-05-30 20:34:53,2023-05-30 20:34:53,0.000s,PASSED
+result = slurper.parseText(sourceId.getResponseBodyContent()),,,,2023-05-30 20:34:53,2023-05-30 20:34:53,0.000s,PASSED
+sourceIdValue = id,,,,2023-05-30 20:34:53,2023-05-30 20:34:53,0.000s,PASSED
+"println(""..value extracted is :"" + sourceIdValue)",,,,2023-05-30 20:34:53,2023-05-30 20:34:53,0.001s,PASSED
+"vendorId = sendRequestAndVerify(findTestObject(""RestWebservices/Create Vendor""))",,,,2023-05-30 20:34:53,2023-05-30 20:34:55,1.857s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2023-05-30 20:34:55,2023-05-30 20:34:55,0.000s,PASSED
+result = slurper.parseText(vendorId.getResponseBodyContent()),,,,2023-05-30 20:34:55,2023-05-30 20:34:55,0.000s,PASSED
+VendorIdValue = id,,,,2023-05-30 20:34:55,2023-05-30 20:34:55,0.000s,PASSED
+"println(""..value extracted is :"" + VendorIdValue)",,,,2023-05-30 20:34:55,2023-05-30 20:34:55,0.000s,PASSED
+"sendRequestAndVerify(findTestObject(""RestWebservices/Create Vendor Account"", [""vendorId"":VendorIdValue]))",,,,2023-05-30 20:34:55,2023-05-30 20:34:57,1.962s,PASSED
+"sendRequestAndVerify(findTestObject(""RestWebservices/Create Payment Virtual"", [""vendorId"":VendorIdValue, ""sourceId"":sourceIdValue]))",,,,2023-05-30 20:34:57,2023-05-30 20:34:59,1.859s,PASSED
